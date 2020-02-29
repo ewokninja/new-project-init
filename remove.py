@@ -1,3 +1,5 @@
+# This script/scrape is currently broken but it's not part that I plan on using so it'll pronbably stay this way
+
 import sys
 from selenium import webdriver
 
@@ -13,7 +15,7 @@ def remove():
     browser.find_elements_by_xpath("//input[@name='login']")[0].send_keys(username)
     browser.find_elements_by_xpath("//input[@name='password']")[0].send_keys(password)
     browser.find_elements_by_xpath("//input[@name='commit']")[0].click()
-    browser.get('https://github.com/silv4b/' + reponame + '/settings')
+    browser.get('https://github.com/ewokninja/' + reponame + '/settings')
     browser.find_elements_by_xpath('//*[@id="options_bucket"]/div[9]/ul/li[4]/details/summary')[0].click()
     browser.find_elements_by_xpath(
         '//*[@id="options_bucket"]/div[9]/ul/li[4]/details/details-dialog/div[3]/form/p/input')[0].send_keys(reponame)
